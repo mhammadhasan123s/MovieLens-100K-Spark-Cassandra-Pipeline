@@ -1,6 +1,6 @@
-🎬 MovieLens-100K Spark–Cassandra Analytics Pipeline
+# 🎬 MovieLens-100K Spark–Cassandra Analytics Pipeline
 P166175
-🚀 Overview
+## 🚀 Overview
 
 This project implements an end-to-end big data analytics pipeline using Apache Spark and Apache Cassandra on the MovieLens 100K dataset.
 
@@ -9,20 +9,22 @@ It demonstrates how raw user behavior data can be processed, transformed, stored
 The pipeline follows a modern data engineering workflow:
 HDFS → Spark Processing → Cassandra Storage → Spark SQL Analytics → Visualization
 
-🎯 Objectives
+## 🎯 Objectives
 Build a scalable big data pipeline using Spark and Cassandra
 Process and clean raw MovieLens dataset
 Perform distributed transformations using Spark RDDs and DataFrames
 Store structured data in Apache Cassandra for efficient querying
 Analyze user behavior, rating patterns, and demographics
 Generate insights using Spark SQL and Zeppelin visualizations
-📊 Key Insights
+
+## 📊 Key Insights
 A small percentage of users contribute a large portion of all ratings (power-user effect)
 Movie popularity does not always correlate with higher average ratings
 User preferences vary significantly across movie genres
 Users under 20 represent a relatively small segment of the platform
 Scientists aged 30–40 show a concentrated and identifiable demographic pattern
-📈 Analytical Tasks
+
+## 📈 Analytical Tasks
 
 The project includes the following analytical components:
 
@@ -32,7 +34,7 @@ The project includes the following analytical components:
 👶 Users younger than 20 analysis
 🧪 Scientists aged 30–40 demographic segmentation
 🎭 User genre preference analysis (advanced extension)
-🏗️ Architecture
+## 🏗️ Architecture
 Raw Data (MovieLens 100K)
         ↓
 HDFS Storage
@@ -46,25 +48,25 @@ Apache Cassandra (Structured Storage)
 Spark SQL Analytics
         ↓
 Zeppelin Visualization & Insights
-⚙️ Technologies Used
+## ⚙️ Technologies Used
 Apache Spark (PySpark)
 Apache Cassandra
 HDFS (Hortonworks Sandbox)
 Zeppelin Notebook
 Python
-🔁 Workflow
+## 🔁 Workflow
 Load MovieLens dataset into HDFS
 Create Spark RDDs and DataFrames
 Clean and transform raw data
 Write structured data into Cassandra tables
 Query data using Spark SQL
 Generate insights and visualizations in Zeppelin
-📊 Example Outputs
+## 📊 Example Outputs
 Top-rated movies ranked by average rating
 Distribution of highly active users
 Genre preference analysis per user
 Demographic segmentation of users (age & occupation-based)
-💼 Business Value
+## 💼 Business Value
 
 This pipeline demonstrates how large-scale behavioral data can be transformed into actionable insights for:
 
@@ -75,7 +77,7 @@ Engagement analysis
 
 It simulates a real-world data engineering + analytics workflow used in modern streaming and recommendation platforms.
 
-🧠 Skills Demonstrated
+## 🧠 Skills Demonstrated
 Big Data Processing (Apache Spark)
 Distributed Data Engineering
 SQL Analytics at Scale
@@ -85,7 +87,7 @@ User Behavior Analysis
 Data Visualization (Zeppelin)
 🔧 How to Run
 
-⚠️ Requires Spark + Cassandra + Zeppelin environment
+## ⚠️ Requires Spark + Cassandra + Zeppelin environment
 
 1. Dataset Setup
 
@@ -104,7 +106,7 @@ Data loading
 Transformation
 Cassandra writing
 SQL analytics
-📌 Reproducibility Notes
+## 📌 Reproducibility Notes
 
 Ensure:
 
