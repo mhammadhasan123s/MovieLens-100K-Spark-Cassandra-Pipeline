@@ -26,13 +26,13 @@ Genre preferences vary significantly across users
 Younger users (<20) represent a smaller segment of the dataset
 Scientists aged 30–40 show a concentrated demographic pattern
 ## Analytical Tasks
-### Average rating per movie
-### Top 10 highest-rated movies
-### Active users (≥ 50 ratings) and their preferences
-### Users younger than 20
-### Scientists aged 30–40 demographic analysis
-## Architecture
+#### Average rating per movie
+#### Top 10 highest-rated movies
+#### Active users (≥ 50 ratings) and their preferences
+#### Users younger than 20
+#### Scientists aged 30–40 demographic analysis
 
+## Architecture
 HDFS → Spark (RDD/DataFrame) → Data Cleaning → Cassandra → Spark SQL → Visualization
 
 ## Technologies Used
