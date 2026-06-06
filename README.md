@@ -1,67 +1,125 @@
-# MovieLens-100K-Spark-Cassandra-Pipeline
+🎬 MovieLens-100K Spark–Cassandra Analytics Pipeline
 P166175
-## Dataset
-Download from:
-[grouplens.org](https://grouplens.org/datasets/movielens/)
-Files used:
-- u.user
-- u.data
-- u.item
-## Project Overview
+🚀 Overview
 
-This project builds a complete big data pipeline using Apache Spark and Apache Cassandra to analyze user behavior and movie ratings from the MovieLens 100K dataset.
+This project implements an end-to-end big data analytics pipeline using Apache Spark and Apache Cassandra on the MovieLens 100K dataset.
 
-The system processes raw data, performs distributed transformations, stores structured results in Cassandra, and generates analytical insights using Spark SQL.
+It demonstrates how raw user behavior data can be processed, transformed, stored, and analyzed at scale to generate meaningful insights about movie ratings, user activity, and demographic patterns.
 
-## Objectives
-Build an end-to-end big data pipeline
-Process and clean raw MovieLens dataset using Spark
-Store structured data in Cassandra for scalable querying
-Perform analytical queries to understand user behavior and movie popularity
-Visualize key insights using Zeppelin notebooks
-## Key Insights
-A small group of users contributes a large portion of all ratings (power-user effect)
-Movie popularity does not always correlate with higher average rating
-Genre preferences vary significantly across users
-Younger users (<20) represent a smaller segment of the dataset
-Scientists aged 30–40 show a concentrated demographic pattern
-## Analytical Tasks
-#### Average rating per movie
-#### Top 10 highest-rated movies
-#### Active users (≥ 50 ratings) and their preferences
-#### Users younger than 20
-#### Scientists aged 30–40 demographic analysis
+The pipeline follows a modern data engineering workflow:
+HDFS → Spark Processing → Cassandra Storage → Spark SQL Analytics → Visualization
 
-## Architecture
-HDFS → Spark (RDD/DataFrame) → Data Cleaning → Cassandra → Spark SQL → Visualization
+🎯 Objectives
+Build a scalable big data pipeline using Spark and Cassandra
+Process and clean raw MovieLens dataset
+Perform distributed transformations using Spark RDDs and DataFrames
+Store structured data in Apache Cassandra for efficient querying
+Analyze user behavior, rating patterns, and demographics
+Generate insights using Spark SQL and Zeppelin visualizations
+📊 Key Insights
+A small percentage of users contribute a large portion of all ratings (power-user effect)
+Movie popularity does not always correlate with higher average ratings
+User preferences vary significantly across movie genres
+Users under 20 represent a relatively small segment of the platform
+Scientists aged 30–40 show a concentrated and identifiable demographic pattern
+📈 Analytical Tasks
 
-## Technologies Used
+The project includes the following analytical components:
+
+🎬 Average rating per movie
+🏆 Top 10 highest-rated movies
+👥 Active users (≥ 50 ratings) and their behavior
+👶 Users younger than 20 analysis
+🧪 Scientists aged 30–40 demographic segmentation
+🎭 User genre preference analysis (advanced extension)
+🏗️ Architecture
+Raw Data (MovieLens 100K)
+        ↓
+HDFS Storage
+        ↓
+Apache Spark (RDD + DataFrame Processing)
+        ↓
+Data Cleaning & Transformation
+        ↓
+Apache Cassandra (Structured Storage)
+        ↓
+Spark SQL Analytics
+        ↓
+Zeppelin Visualization & Insights
+⚙️ Technologies Used
 Apache Spark (PySpark)
 Apache Cassandra
 HDFS (Hortonworks Sandbox)
 Zeppelin Notebook
 Python
-## Workflow
+🔁 Workflow
 Load MovieLens dataset into HDFS
-Create RDDs and DataFrames using Spark
-Clean and transform data
-Store structured data in Cassandra
+Create Spark RDDs and DataFrames
+Clean and transform raw data
+Write structured data into Cassandra tables
 Query data using Spark SQL
-Generate insights and visualizations
-## Output Examples
-Movie ranking based on average rating
-User activity distribution
-Genre preference analysis
-Demographic segmentation
-## Business Value
+Generate insights and visualizations in Zeppelin
+📊 Example Outputs
+Top-rated movies ranked by average rating
+Distribution of highly active users
+Genre preference analysis per user
+Demographic segmentation of users (age & occupation-based)
+💼 Business Value
 
-This pipeline demonstrates how large-scale user behavior data can be transformed into actionable insights for recommendation systems, audience segmentation, and content strategy optimization.
+This pipeline demonstrates how large-scale behavioral data can be transformed into actionable insights for:
 
-## Reproducibility
+Recommendation systems
+User segmentation
+Content strategy optimization
+Engagement analysis
+
+It simulates a real-world data engineering + analytics workflow used in modern streaming and recommendation platforms.
+
+🧠 Skills Demonstrated
+Big Data Processing (Apache Spark)
+Distributed Data Engineering
+SQL Analytics at Scale
+Data Modeling with Cassandra
+ETL Pipeline Design
+User Behavior Analysis
+Data Visualization (Zeppelin)
+🔧 How to Run
+
+⚠️ Requires Spark + Cassandra + Zeppelin environment
+
+1. Dataset Setup
+
+Upload MovieLens dataset to HDFS:
+
+/user/maria_dev/ml-100k/
+2. Start Services
+Apache Spark
+Apache Cassandra
+Zeppelin Notebook
+3. Run Pipeline
+
+Execute notebook cells in order:
+
+Data loading
+Transformation
+Cassandra writing
+SQL analytics
+📌 Reproducibility Notes
 
 Ensure:
 
-Cassandra keyspace and tables are created
-MovieLens dataset is loaded into HDFS
-Spark-Cassandra connector is correctly configured
+Cassandra keyspace and tables are created before execution
+Spark-Cassandra connector version matches Spark version
+Dataset paths in HDFS are correctly configured
 Zeppelin interpreter is properly set up
+📷 (Optional Enhancements)
+
+You can improve this repo further by adding:
+
+Charts screenshots in /outputs
+Architecture diagram image
+Sample query results
+Dashboard screenshots
+🏁 Final Note
+
+This project showcases a complete end-to-end big data analytics pipeline, combining distributed processing, scalable storage, and analytical querying to derive meaningful insights from real-world data.
